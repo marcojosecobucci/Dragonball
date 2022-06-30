@@ -11,10 +11,10 @@ public class Main {
         Skill triploCalcio = new Skill("triploCalcio", 40, 0.90);
 
         Character goku = new Character("Goku" , Race.Sayan, 200, Arrays.asList(kaikoen, kamehameha, colpoDiLuce, triploCalcio),
-                30, 0.8f, 0.3f, 0.4f);
+                30, 0.8f, 0.35f, 0.4f);
 
         Character vegeta = new Character("Vegeta" , Race.Sayan, 180, Arrays.asList(kaikoen, kamehameha, colpoDiLuce, triploCalcio),
-                25, 0.8f, 0.4f, 0.3f);
+                25, 0.8f, 0.45f, 0.3f);
 
         Fight fight = new Fight(goku, vegeta);
 

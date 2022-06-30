@@ -12,7 +12,8 @@ public class Fight {
 
     public void autoFight() {
         int counterFighter = new Random().nextInt(10);
-        do {
+
+        while (character1.getLifePoints() > 0 && character2.getLifePoints() > 0) {
             Character striker = counterFighter % 2 == 0 ? character1 : character2;
             Character defender = counterFighter % 2 == 0 ? character2 : character1;
 
@@ -30,7 +31,7 @@ public class Fight {
 
             System.out.println();
             counterFighter++;
-        } while (character1.getLifePoints() > 0 && character2.getLifePoints() > 0);
+        }
 
         System.out.println();
         Character winnerIs = character1.getLifePoints() > character2.getLifePoints() ? character1 : character2;
@@ -48,7 +49,6 @@ public class Fight {
 
     private boolean probabilityAttackGo(Skill skill, Character defender) {
         double probability = skill.getProbabiltyAttackHit() * defender.getAbilityToDodge();
-
         return probability <= Math.random();
     }
 
