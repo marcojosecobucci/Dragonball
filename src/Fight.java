@@ -53,7 +53,7 @@ public class Fight {
     }
 
     private void attack(Skill skill, Character defender) {
-        float damage = skill.getDamage() * defender.getPhysicalEndurance();
-        defender.setLifePoints(defender.getLifePoints() - (int) damage);
+        int damage = Math.round(skill.getDamage() * defender.getPhysicalEndurance());
+        defender.setLifePoints(defender.getLifePoints() - damage);
     }
 }
