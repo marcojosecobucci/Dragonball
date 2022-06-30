@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Fight {
 
     private final Character character1;
@@ -9,7 +11,7 @@ public class Fight {
     }
 
     public void autoFight() {
-        int counterFighter = 0;
+        int counterFighter = new Random().nextInt(10);
         do {
             Character striker = counterFighter % 2 == 0 ? character1 : character2;
             Character defender = counterFighter % 2 == 0 ? character2 : character1;
@@ -36,8 +38,8 @@ public class Fight {
     }
 
     private Skill selectedAttack(Character striker) {
-        int random = (int) ((Math.random() * 10) / 2);
-        if (random < 3) {
+        int random = new Random().nextInt(6);
+        if (random <= 3) {
             return striker.getSkills().get(random);
         } else {
             return striker.skillBase();

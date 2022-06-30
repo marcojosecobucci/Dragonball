@@ -42,10 +42,6 @@ public class Character implements SkillBase {
         return skills;
     }
 
-    public int getPhysicalForce() {
-        return physicalForce;
-    }
-
     public float getAbilityToDodge() {
         return abilityToDodge;
     }
