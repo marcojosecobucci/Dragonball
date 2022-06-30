@@ -47,7 +47,7 @@ public class Fight {
     private boolean probabilityAttackGo(Skill skill, Character defender) {
         double probability = skill.getProbabiltyAttackHit() * defender.getAbilityToDodge();
 
-        return probability < Math.random() * 10;
+        return probability <= Math.random();
     }
 
     private void attack(Skill skill, Character defender) {
