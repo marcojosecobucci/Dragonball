@@ -5,15 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Character implements SkillBase {
-    private String name;
-    private Race race;
+    private final String name;
+    private final Race race;
     private int lifePoints;
-    private List<Skill> skills;
-    private int physicalForce;
+    private final List<Skill> skills;
+    private final int physicalForce;
 
-    private float baseAttackProbability;
-    private float abilityToDodge;
-    private float physicalEndurance;
+    private final float baseAttackProbability;
+    private final float abilityToDodge;
+    private final float physicalEndurance;
 
     public Character(String name, Race race, int lifePoints, List<Skill> skills, int physicalForce, float baseAttackProbability, float abilityToDodge, float physicalEndurance) {
         this.name = name;

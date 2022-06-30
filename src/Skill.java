@@ -1,8 +1,8 @@
 
 public class Skill implements Enumerator_Interface.Skill {
-    private String nameSkill;
-    private int damage;
-    private double probabiltyAttackHit;
+    private final String nameSkill;
+    private final int damage;
+    private final double probabiltyAttackHit;
 
     public Skill(String nameSkill, int damage, double probabiltyAttackHit) {
         this.nameSkill = nameSkill;
